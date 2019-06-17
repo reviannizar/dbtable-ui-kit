@@ -1,0 +1,76 @@
+/*
+dbtable-bs4 ver 0.0.0.1
+
+Copy Right (c)2019 
+author	: Abu Dzunnuraini
+email	: almprokdr@gmail.com
+*/
+
+/*---*/
+.btn-app {margin:0}
+.box{background-color: rgba(255,255,255,0.8);}
+.box-header.with-border{border-bottom:1px solid #ccc}
+.box-body {padding:0 10px}
+.table>thead>tr>th,.table>tbody>tr>th,.table>tfoot>tr>th,.table>thead>tr>td,.table>tbody>tr>td,.table>tfoot>tr>td{border-top:1px solid #ccc}
+.table-bordered>thead>tr>th,.table-bordered>tbody>tr>th,.table-bordered>tfoot>tr>th,.table-bordered>thead>tr>td,.table-bordered>tbody>tr>td,.table-bordered>tfoot>tr>td{border-color:#ccc;}
+.content-wrapper{padding:5px 10px; background-color:rgba(236,240,245,0.5);}
+.content-wrapper{background-image:-moz-linear-gradient(top,rgba(255,255,255,0.1),#fff);background-image:-ms-linear-gradient(top,rgba(255,255,255,0.1),#fff);background-image:-webkit-gradient(linear,0 0,0 100%,from(rgba(255,255,255,0.1)),to(#fff)));background-image:-webkit-linear-gradient(top,rgba(255,255,255,0.1),#fff);background-image:-o-linear-gradient(top,rgba(255,255,255,0.1),#fff);background-image:linear-gradient(top,rgba(255,255,255,0.1),#fff);}
+.nav-tabs-custom>.nav-tabs>li.active{font-weight:bold}
+/*---*/
+
+.dbtable-cel{white-space:nowrap;overflow:hidden;cursor:pointer;line-height: 30px;}
+.dbtable-cel-wrap{cursor:pointer;line-height: 22px;}
+.dbtable-cel-text{white-space:nowrap;overflow:hidden;}
+.dbtable-cel-head-hover{background-color:#eee;cursor:pointer}
+.dbtable-cel-select{background-color:#fbec88!important}
+.dbtable-cel-strip{background-color:#eedfff}
+
+.dbtable-box{padding:0;}
+.dbtable-box-body{overflow:auto;}
+.dbtable-header{background-color: #eaeaea;background: -webkit-linear-gradient(top,#ffffff 0,#eaeaea 100%);background: -moz-linear-gradient(top,#ffffff 0,#eaeaea 100%);background: -o-linear-gradient(top,#ffffff 0,#eaeaea 100%);background: linear-gradient(to bottom,#ffffff 0,#eaeaea 100%);background-repeat: repeat-x;filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#ffffff,endColorstr=#eaeaea,GradientType=0);}
+.dbtable-footer{max-height:51px}
+.dbtable-head-list{margin:0;width:100px;position:relative;}
+.dbtable-title{vertical-align:middle;padding-left:10px;font-weight:bold;color:#5827bd;text-shadow:0px 1px 3px rgba(0, 0, 0, 0.20);}
+.dbtable-div-title{position:absolute;top:15px;text-align:center;width:100%;white-space: nowrap;margin: 0 -20px 0;}
+.dbtable-toolbar-spc{border-left:solid 1px #ccc;margin:0 3px}
+.dbtable-rowbtn-spc{border-left:solid 1px #ccc;margin:0 2px 0 0}
+
+.dbtable-page-list{top:-12px;height:28px; width:60px}
+.dbtable-page-input{width:40px;height:28px}
+.pagination>li>a{border-color:#ccc}
+.box-header .box-title{font-size:16px}
+.dropdown-menu>li>a {font-size:14px}
+
+.dbtable-btn-action{margin:0;}
+.dbtable-btn-action-icon{padding-top:9px;font-size:90%;}
+
+/*
+.form-control{color:#000!important}
+*/
+.fa-fw{display:inline!important}
+
+.box>.overlay,.overlay-wrapper>.overlay,.box>.loading-img,.overlay-wrapper>.loading-img{position:absolute;top:0;left:0;width:100%;height:100%}
+.box .overlay,.overlay-wrapper .overlay{z-index:50;border-radius:3px}
+.box .overlay>.fa,.overlay-wrapper .overlay>.fa{position:absolute;top:50%;left:50%;margin-left:-15px;margin-top:-15px;color:#000;font-size:30px}
+.box .overlay.dark,.overlay-wrapper .overlay.dark{background:rgba(0,0,0,0.5)}
+
+/*----[override bootstrap]----*/
+@media (max-width:767px){
+.label-sub{margin-top:15px!important}
+}
+
+.app-content{overflow:hidden}
+.table-bordered{border-color:#dadada!important}
+
+.dbtable-tiles{}
+.dbtable-tiles .dbtable-tile{padding:10px; border-top:1px solid #eee}
+.dbtable-tiles .dbtable-tile:before,.dbtable-tiles .dbtable-tile:after{content:" ";display:table}
+.dbtable-tiles .dbtable-tile:after{clear:both}
+.dbtable-tiles .dbtable-tile:last-of-type{border-bottom:0}
+.dbtable-tiles .dbtable-tile:first-of-type{padding-top:10px}
+.dbtable-tiles .dbtable-tile img{float:left; height:60px; margin-right:10px}
+.dbtable-tiles .tile-contents{margin-right: 40px;}
+.dbtable-tiles .tile-content{white-space:nowrap;overflow:hidden;}
+.dbtable-tiles .tile-content-head{font-size:120%; font-weight:bold}
+.dbtable-tiles .tile-action{float: right; width:22px}
+.dbtable-tiles .tile-nav{margin-bottom: 4px;}

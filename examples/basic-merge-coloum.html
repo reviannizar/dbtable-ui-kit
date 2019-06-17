@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>dbtable-ui-kit base examples</title>
+<link href="/dpit/favicon.ico" rel="shortcut icon" type="image/ico" />
+<link href="../libs/assets/css/bootstrap.4.1.1.min.css" rel="stylesheet">
+<link href="../libs/assets/css/now-ui-kit.min.css" rel="stylesheet">
+<link href="../libs/assets/css/font.awesome.5.0.6.css" rel="stylesheet">
+<link href="../libs/assets/css/font-awesome.min.css" rel="stylesheet">
+<link href="../src/css/dbtable-ui-kid.css?v=0.0.0.1" rel="stylesheet">
+<link href="../src/css/libs-ui-kid.css?v=0.0.0.1" rel="stylesheet">
+<style>
+</style>
+<script src="../libs/assets/js/jquery-3.3.1.min.js"></script>
+<script src="../libs/assets/js/popper.min.js"></script>
+<script src="../libs/assets/js/bootstrap.4.1.1.min.js"></script>
+<script src="../libs/assets/js/now-ui-kit.min.js"></script>
+<script src="../libs/assets/js/jquery.nicescroll.min.js"></script>
+<script src="../src/js/dbtable-ui-kid.js?v=0.0.0.1"></script>
+<script src="../src/js/libs-ui-kid.js?v=0.0.0.1"></script>
+</head>
+<body class="index-page sidebar-collapse" >
+<!--[header menu]-->
+<nav class="navbar navbar-expand-lg bg-primary fixed-top navbar-mainapp" color-on-scroll="350">
+<div class="container">
+	<div class="navbar-translate">
+		<a class="navbar-brand" href="javascript:void(0)" rel="tooltip" title="" data-placement="bottom" data-original-title="">Now UI Kit</a>
+		<button class="navbar-toggler navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-bar top-bar"></span>
+			<span class="navbar-toggler-bar middle-bar"></span>
+			<span class="navbar-toggler-bar bottom-bar"></span>
+		 </button>
+	</div>
+
+	<div class="collapse navbar-collapse justify-content-end" id="navigation" data-nav-image="//revian/dpit/dist/assets/elte/img/blurred-image.jpg">
+	<ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" href="introduction.html"><i class="now-ui-icons text_align-left"></i> Documentation</a>
+        </li>
+	</ul>
+	</div>
+	</div>
+</nav><!--[end header menu]-->
+<div class="app-content">
+	<div class="wrapper">
+		<div class="main">
+			<div class="section _pid-section-kln">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12">
+							<div class="box _pid-kln"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		<!--[]-->
+		</div>
+	</div>
+<script>
+
+/*
+Copy Right (c)2019
+author	: Abu Dzunnuraini
+email	: almprokdr@gmail.com
+*/
+
+var _pid_options = {
+	"pid": "_pid",
+	"kln": {
+		"pid": "_pid",
+		"obj": "kln",
+		"nice": false,//true,
+		"options": {
+			"title": "Daftar Klinik",
+			"url": "/dpit/guest.php/units/dinkes/sarana/getdata?i=1",
+			"border": true,
+			"wrap": true,
+			//"height":500,
+			"footerInfo":{"text":"Sumber: Dinas Kesehatan Kabupaten Kediri"},
+			"table": [[{
+						"rowspan": 2,
+						"field": "no",
+						"title": "No.",
+						"width": 30
+					}, {
+						"rowspan": 2,
+						"field": "nama",
+						"title": "Sarana Prasarana Kesehatan",
+						"width": 190,
+						"sortable": true
+//					}, {
+//						"rowspan": 2,
+//						"field": "action","title": "","align": "center","width": 70,"formatter": "_pid.tdAction"
+					}, {
+						"rowspan": 2,
+						"field": "alamat",
+						"title": "Alamat",
+						"width": 280,
+						"sortable": true
+					}, {
+						"rowspan": 2,
+						"field": "telp",
+						"title": "Telp",
+						"width": 100,
+						"sortable": true
+					}, {
+						"rowspan": 2,
+						"field": "kategori",
+						"title": "Kategori",
+						"width": 60,
+						"sortable": true
+					}, {
+						"colspan": 2,
+						"title": "Online",
+						"title_style": {
+							"text-align": "center",
+							"color": "#00a",
+							"font-weight": "bold"
+						}
+					}], [{
+						"field": "email",
+						"title": "Email",
+						"width": 240,
+						"sortable": true
+					}, {
+						"field": "website",
+						"title": "Website",
+						"width": 240,
+						"sortable": true
+					}
+
+				]]
+		},
+		"toolbar": [{
+				"title": "Home",
+				"action": "_pid.goHome()",
+				"icon": "fa-home",
+				"btn": "warning"
+			}, {
+				"title": "-1"
+			}, {
+				"title": "Edit data",
+				"action": "_pid.editData()",
+				"icon": "fa-pencil-square-o",
+				"btn": "default",
+				"hide": false
+			}, {
+				"title": "Hapus data",
+				"action": "_pid.delData()",
+				"icon": "fa-trash-o",
+				"btn": "default",
+				"hide": false
+			}, {
+				"title": "-2"
+			}, {
+				"title": "Print Preview",
+				"action": "_pid.printContent(this)",
+				"icon": "fa-print",
+				"btn": "default",
+				"hide": false
+			}
+		],
+		"pagebar": {
+			"pagesize": 10,
+			"pagelist": [10, 20, 50, 100, 500, 1000, 5000, 10000]
+		},
+		"findbar": {
+			"str_nama": "Nama",
+			"str_alamat": "Alamat"
+		},
+	},
+};
+
+var _pid=(function(){
+	"use strict";
+	var pub = _pid_options,pid,isdef=true,zbox;
+	pub.init = function (){
+		pub.kln=new dbtable(pub.kln);
+		pid=pub.pid; 
+		startUikit(); 
+	}
+	pub.tdAction = function (v,r){
+		var	a=
+			'<a class="btn btn-icon btn-round btn-default btn-sm dbtable-btn-action" title="Edit data" onclick="'+'_pid.editData('+r.index+')"><i class="fa fa-pencil-square-o dbtable-btn-action-icon"></i></a> '+
+			'<span class="dbtable-btn-round rowbtn-spc">&nbsp;</span>'+
+			'<a class="btn btn-icon btn-round btn-warning btn-sm dbtable-btn-action" title="Hapus data" onclick="'+'_pid.delData('+r.index+')"><i class="fa fa-trash-o dbtable-btn-action-icon"></i></a> '+
+			'';
+		return a;
+	}
+	//---------------
+	pub.editData = function (a){
+		msgInfo.show('Edit data Clicked...');
+	}
+	pub.delData = function (a){
+		msgInfo.show('Hapus data Clicked...');
+	}
+	pub.goHome = function (a){
+		msgInfo.show('goHome Clicked...');
+	}
+	pub.printContent = function (a){
+		msgInfo.show('Print Preview Clicked...');
+	}
+	pub.formatNegeri = function (v,r){ return v=v=='0'?'':'<i class="fa fa-fw fa-star"></i>' }	
+	pub.formatSwasta = function (v,r){ return v=v=='0'?'':'<i class="fa fa-fw fa-star-o"></i>' }
+	//---------------
+	pub.init();
+	return pub;
+})()
+</script>
+
+<script>
+$(function(){ 
+	msgInfo.init();
+})
+</script>
+
+</div>
+</body>
+</html>
