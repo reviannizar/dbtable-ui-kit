@@ -10,7 +10,7 @@
 <link href="../libs/assets/css/now-ui-kit.min.css" rel="stylesheet">
 <link href="../libs/assets/css/font.awesome.5.0.6.css" rel="stylesheet">
 <link href="../libs/assets/css/font-awesome.min.css" rel="stylesheet">
-<link href="../src/css/dbtable-ui-kid.css?v=0.0.0.1" rel="stylesheet">
+<link href="../src/css/dbtable-ui-kid.css?v=0.0.0.2" rel="stylesheet">
 <link href="../src/css/libs-ui-kid.css?v=0.0.0.1" rel="stylesheet">
 <style>
 </style>
@@ -93,7 +93,7 @@ var _pid_options = {
 						"sortable": true
 					}, {
 						"rowspan": 2,
-						"field": "action","title": "","align": "center","width": 70,"formatter": "_pid.tdAction"
+						"field": "action","title": "","align": "center","width": 70,"formatter": "_pid.klnAction"
 					}, {
 						"rowspan": 2,
 						"field": "alamat",
@@ -145,13 +145,13 @@ var _pid_options = {
 				"title": "Edit data",
 				"action": "_pid.editData()",
 				"icon": "fa-pencil-square-o",
-				"btn": "default",
+				"btn": "info",
 				"hide": false
 			}, {
 				"title": "Hapus data",
 				"action": "_pid.delData()",
 				"icon": "fa-trash-o",
-				"btn": "default",
+				"btn": "danger",
 				"hide": false
 			}, {
 				"title": "-2"
@@ -182,25 +182,27 @@ var _pid=(function(){
 		pid=pub.pid; 
 		startUikit(); 
 	}
-	pub.tdAction = function (v,r){
+	pub.klnAction = function (v,r){
 		var	a=
-			'<a class="btn btn-icon btn-round btn-default btn-sm dbtable-btn-action" title="Edit data" onclick="'+'_pid.editData('+r.index+')"><i class="fa fa-pencil-square-o dbtable-btn-action-icon"></i></a> '+
+			'<a class="btn btn-icon btn-round btn-info btn-sm dbtable-btn-action" title="Edit data" onclick="'+'_pid.editData('+r.index+')"><i class="fa fa-pencil-square-o dbtable-btn-action-icon"></i></a> '+
 			'<span class="dbtable-btn-round rowbtn-spc">&nbsp;</span>'+
-			'<a class="btn btn-icon btn-round btn-warning btn-sm dbtable-btn-action" title="Hapus data" onclick="'+'_pid.delData('+r.index+')"><i class="fa fa-trash-o dbtable-btn-action-icon"></i></a> '+
+			'<a class="btn btn-icon btn-round btn-danger btn-sm dbtable-btn-action" title="Hapus data" onclick="'+'_pid.delData('+r.index+')"><i class="fa fa-trash-o dbtable-btn-action-icon"></i></a> '+
 			'';
 		return a;
 	}
 	//---------------
-	pub.editData = function (a){
-		msgInfo.show('Edit data Clicked...');
+	pub.editData = function (i){
+		if(typeof(i)=='undefined') var i=pub.kln.getIndex();
+		if(i<0) return; var r=pub.kln.getRow(i);
+		msgInfo.show('Edit data '+JSON.stringify(r));
 	}
-	pub.delData = function (a){
+	pub.delData = function (i){
 		msgInfo.show('Hapus data Clicked...');
 	}
-	pub.goHome = function (a){
+	pub.goHome = function (i){
 		msgInfo.show('goHome Clicked...');
 	}
-	pub.printContent = function (a){
+	pub.printContent = function (i){
 		msgInfo.show('Print Preview Clicked...');
 	}
 	pub.formatNegeri = function (v,r){ return v=v=='0'?'':'<i class="fa fa-fw fa-star"></i>' }	
